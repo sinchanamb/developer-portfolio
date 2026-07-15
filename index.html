@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchana M B | Software Engineer & Full Stack Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Sinchana M B, a Software Engineer & Full Stack Developer specializing in building high-performance web applications and scalable cloud systems.">
+    <meta name="keywords" content="Sinchana M B, Software Engineer, Full Stack Developer, Portfolio, React, Node.js, Web Development">
+    <meta name="author" content="Sinchana M B">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sinchana M B | Software Engineer Portfolio">
+    <meta property="og:description" content="Portfolio of Sinchana M B, a Software Engineer & Full Stack Developer. View projects, experience, and skills.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sinchana M B | Software Engineer Portfolio">
+    <meta property="twitter:description" content="Portfolio of Sinchana M B, a Software Engineer & Full Stack Developer. View projects, experience, and skills.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-gray-100 font-sans overflow-x-hidden selection:bg-primary-500 selection:text-white">
+
+    <!-- Custom Background Grid -->
+    <div class="fixed inset-0 grid-bg -z-50 opacity-30"></div>
+    <div class="fixed inset-0 radial-gradient -z-40"></div>
+    
+    <!-- Animated Glowing Blobs -->
+    <div class="fixed top-1/4 left-1/4 w-96 h-96 bg-primary-600 rounded-full blur-3xl opacity-10 animate-blob -z-30"></div>
+    <div class="fixed bottom-1/4 right-1/4 w-96 h-96 bg-secondary-500 rounded-full blur-3xl opacity-10 animate-blob animation-delay-2000 -z-30"></div>
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass" id="main-header">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="text-2xl font-bold tracking-tight font-display text-gradient">
+                SMB
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link font-medium text-primary-400 hover:text-primary-300">Get in Touch</a>
+            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="md:hidden text-gray-200 hover:text-white focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden absolute top-full left-0 w-full glass border-t border-white-10 py-6 px-6" id="mobile-menu">
+            <nav class="flex flex-col gap-5">
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#experience" class="mobile-nav-link">Experience</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#contact" class="mobile-nav-link text-primary-400 font-medium">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center relative pt-20 px-6">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center w-full">
+                <!-- Hero Content -->
+                <div class="md:col-span-7 flex flex-col items-start text-left reveal-on-scroll">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide bg-primary-950/50 border border-primary-500/30 text-primary-300 mb-6 glass">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Available for Opportunities
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-tight mb-4 text-white">
+                        Hi, I'm <span class="text-gradient">Sinchana M B</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-300 mb-6 h-12">
+                        I build <span id="typing-text" class="text-secondary-400"></span><span class="animate-pulse font-normal">|</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 max-w-xl mb-8 leading-relaxed">
+                        I am a passionate software engineer specializing in building high-performance web applications, robust APIs, and cloud services. Dedicated to clean architecture and beautiful user experiences.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Work</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual (Interactive SVG/Glass Graphics) -->
+                <div class="md:col-span-5 flex justify-center items-center relative reveal-on-scroll animation-delay-500">
+                    <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl overflow-hidden glass border border-white-10 flex items-center justify-center shadow-2xl shadow-primary-500/10">
+                        <!-- Custom styled glass panel with coding snippet -->
+                        <div class="w-full h-full p-8 flex flex-col justify-between font-mono text-xs text-secondary-400">
+                            <div class="flex justify-between items-center opacity-70">
+                                <span>portfolio.js</span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/70"></span>
+                            </div>
+                            <div class="my-auto space-y-3">
+                                <p class="text-primary-300 font-semibold">&lt;DeveloperProfile /&gt;</p>
+                                <p class="pl-4 text-gray-300"><span class="text-purple-400">const</span> skills = [<br>
+                                    <span class="text-emerald-400 pl-4">"React"</span>, <span class="text-emerald-400">"Node.js"</span>,<br>
+                                    <span class="text-emerald-400 pl-4">"Python"</span>, <span class="text-emerald-400">"Docker"</span><br>
+                                ];</p>
+                                <p class="pl-4 text-gray-300"><span class="text-purple-400">const</span> status = <span class="text-amber-400">"Building Scaled Apps"</span>;</p>
+                            </div>
+                            <div class="text-right text-gray-500 opacity-60">
+                                <span>UTF-8 // Node LTS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Outer Decorative Rings -->
+                    <div class="absolute w-80 h-80 md:w-96 md:h-96 border border-primary-500/20 rounded-full -z-10 animate-spin-slow"></div>
+                    <div class="absolute w-96 h-96 md:w-[450px] md:h-[450px] border border-dashed border-secondary-500/10 rounded-full -z-10 animate-spin-reverse-slow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 px-6 relative border-t border-white-5">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-xs uppercase tracking-widest text-primary-400 font-bold mb-2">About Me</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold font-display text-white">My Journey & Philosophy</h3>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-6 space-y-6 reveal-on-scroll">
+                        <h4 class="text-2xl font-bold text-gray-100">Solving complex problems with elegant code.</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            I am a software developer with a strong foundation in modern web engineering and problem solving. My focus is on writing clean, reusable code and designing systems that scale effortlessly. 
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            With hands-on experience across the entire development lifecycle, from system architecture and database design to frontend styling and responsive layouts, I love turning ideas into high-quality software.
+                        </p>
+                        
+                        <!-- Mini Info Table -->
+                        <div class="grid grid-cols-2 gap-4 pt-4 text-sm">
+                            <div>
+                                <span class="text-gray-500 block">Name</span>
+                                <span class="text-gray-200 font-medium">Sinchana M B</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 block">Location</span>
+                                <span class="text-gray-200 font-medium">India</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 block">Role</span>
+                                <span class="text-gray-200 font-medium">Software Engineer</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 block">Email</span>
+                                <span class="text-gray-200 font-medium"><a href="#contact" class="hover:underline text-primary-400">sinchana.mb@example.com</a> <!-- TODO: Replace with your actual email --></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="md:col-span-6 grid grid-cols-2 gap-6 reveal-on-scroll animation-delay-300">
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-primary-500/40 transition-all duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                            </div>
+                            <span class="block text-4xl font-extrabold font-display text-gradient">8+</span>
+                            <span class="text-sm text-gray-400 mt-1 block">Years of Experience <!-- TODO: Update experience metrics --></span>
+                        </div>
+
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-secondary-500/40 transition-all duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center text-secondary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="code-xml" class="w-5 h-5"></i>
+                            </div>
+                            <span class="block text-4xl font-extrabold font-display text-gradient">50+</span>
+                            <span class="text-sm text-gray-400 mt-1 block">Projects Delivered <!-- TODO: Update project count --></span>
+                        </div>
+
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-secondary-500/40 transition-all duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center text-secondary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <span class="block text-4xl font-extrabold font-display text-gradient">10+</span>
+                            <span class="text-sm text-gray-400 mt-1 block">Technical Certifications <!-- TODO: Update certifications count --></span>
+                        </div>
+
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-primary-500/40 transition-all duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-400 mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <span class="block text-4xl font-extrabold font-display text-gradient">15+</span>
+                            <span class="text-sm text-gray-400 mt-1 block">Enterprise Clients <!-- TODO: Update team collaborations count --></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 px-6 relative border-t border-white-5 bg-dark-950">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-xs uppercase tracking-widest text-primary-400 font-bold mb-2">Technical Skills</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold font-display text-white">My Tech Stack & Expertise</h3>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Frontend -->
+                    <div class="glass p-8 rounded-2xl border border-white-5 hover:border-primary-500/30 transition-all duration-300 reveal-on-scroll">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-400">
+                                <i data-lucide="layout" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-xl font-bold font-display text-gray-100">Frontend</h4>
+                        </div>
+                        <ul class="space-y-4">
+                            <!-- Skill Item -->
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">React.js & Next.js</span>
+                                    <span class="text-primary-400 font-semibold">90%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">TypeScript / JavaScript</span>
+                                    <span class="text-primary-400 font-semibold">85%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">CSS3 & Tailwind CSS</span>
+                                    <span class="text-primary-400 font-semibold">90%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">HTML5 / Responsive Design</span>
+                                    <span class="text-primary-400 font-semibold">95%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="glass p-8 rounded-2xl border border-white-5 hover:border-secondary-500/30 transition-all duration-300 reveal-on-scroll animation-delay-200">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-secondary-500/10 flex items-center justify-center text-secondary-400">
+                                <i data-lucide="database" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-xl font-bold font-display text-gray-100">Backend</h4>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">Node.js / Express</span>
+                                    <span class="text-secondary-400 font-semibold">80%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-secondary-500 to-primary-500 h-full rounded-full transition-all duration-1000" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">Python / Django</span>
+                                    <span class="text-secondary-400 font-semibold">75%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-secondary-500 to-primary-500 h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">RESTful APIs & GraphQL</span>
+                                    <span class="text-secondary-400 font-semibold">85%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-secondary-500 to-primary-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">PostgreSQL / MongoDB</span>
+                                    <span class="text-secondary-400 font-semibold">80%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-secondary-500 to-primary-500 h-full rounded-full transition-all duration-1000" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools & DevOps -->
+                    <div class="glass p-8 rounded-2xl border border-white-5 hover:border-primary-500/30 transition-all duration-300 reveal-on-scroll animation-delay-400">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-400">
+                                <i data-lucide="settings" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-xl font-bold font-display text-gray-100">DevOps & Tools</h4>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">Git / GitHub Version Control</span>
+                                    <span class="text-primary-400 font-semibold">90%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">Docker Containers</span>
+                                    <span class="text-primary-400 font-semibold">70%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 70%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">AWS (S3, EC2, Lambda)</span>
+                                    <span class="text-primary-400 font-semibold">75%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li class="space-y-1">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-300">CI/CD & Cloud Deployment</span>
+                                    <span class="text-primary-400 font-semibold">80%</span>
+                                </div>
+                                <div class="w-full bg-white-5 h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 h-full rounded-full transition-all duration-1000" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-24 px-6 relative border-t border-white-5">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-xs uppercase tracking-widest text-primary-400 font-bold mb-2">My Journey</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold font-display text-white">Work Experience</h3>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto relative pl-6 border-l border-white-10 timeline-container">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-12 relative reveal-on-scroll">
+                        <!-- Bullet -->
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary-500 border-4 border-dark-900 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                        
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-primary-500/20 transition-all duration-300">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h4 class="text-lg font-bold text-gray-100">Senior Full-Stack Architect / Tech Lead</h4>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950/40 border border-emerald-500/30 text-emerald-400">Current</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                                <span class="font-semibold text-secondary-400">TechCorp Solutions</span> <!-- TODO: Replace with actual company -->
+                                <span>&bull;</span>
+                                <span>June 2022 - Present</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-400 pl-4 list-disc">
+                                <li>Architected and led the development of a high-throughput microservices backend, boosting API request handling by 45% and dropping latency.</li>
+                                <li>Pioneered React/Next.js dynamic frontend frameworks, introducing atomic design systems that speed up UI component delivery by 30%.</li>
+                                <li>Spearheaded cloud migration strategies on AWS (EC2, ECS, Lambda), designing scalable CI/CD pipelines that reduced build deployments to under 5 minutes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-12 relative reveal-on-scroll">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary-500 border-4 border-dark-900 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+                        
+                        <div class="glass p-6 rounded-2xl border border-white-5 hover:border-secondary-500/20 transition-all duration-300">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h4 class="text-lg font-bold text-gray-100">Senior Software Engineer</h4>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-950/40 border border-primary-500/30 text-primary-400">Completed</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                                <span class="font-semibold text-secondary-400">Innovate Software Labs</span> <!-- TODO: Replace with actual company -->
+                                <span>&bull;</span>
+                                <span>Sept 2018 - May 2022</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-400 pl-4 list-disc">
+                                <li>Mentored a junior engineering team while building customer-facing dashboard features using React, Redux, and Node.js.</li>
+                                <li>Refactored legacy monolith into highly decoupled API endpoints, streamlining system scaling and database queries.</li>
+                                <li>Pioneered strict TypeScript guidelines and end-to-end integration tests, raising project codebase test coverage from 45% to 88%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 px-6 relative border-t border-white-5 bg-dark-950">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-xs uppercase tracking-widest text-primary-400 font-bold mb-2">My Work</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold font-display text-white">Featured Projects</h3>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="glass rounded-2xl overflow-hidden border border-white-5 hover:border-primary-500/30 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full reveal-on-scroll">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary-900 to-secondary-900 flex items-center justify-center">
+                            <!-- Dynamic Project Visual -->
+                            <div class="absolute inset-0 bg-dark-950/20 group-hover:scale-105 transition-transform duration-500"></div>
+                            <i data-lucide="message-square" class="w-16 h-16 text-primary-400/40 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute bottom-4 left-4 flex gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-primary-300 border border-primary-500/20 uppercase tracking-wider">React</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-primary-300 border border-primary-500/20 uppercase tracking-wider">Socket.io</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-primary-400 transition-colors">DevFlow Community</h4>
+                            <p class="text-sm text-gray-400 mb-6 flex-grow">
+                                A dynamic developer workspace and messaging forum featuring channels, live chatting, and collaborative markdown document editing.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-white-5 mt-auto">
+                                <a href="https://github.com/sinchanamb/devflow" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white flex items-center gap-1.5">
+                                    <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                                </a>
+                                <a href="https://devflow-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="text-sm text-primary-400 hover:text-primary-300 flex items-center gap-1">
+                                    Live Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="glass rounded-2xl overflow-hidden border border-white-5 hover:border-secondary-500/30 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full reveal-on-scroll animation-delay-200">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-secondary-900 to-primary-900 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-dark-950/20 group-hover:scale-105 transition-transform duration-500"></div>
+                            <i data-lucide="kanban" class="w-16 h-16 text-secondary-400/40 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute bottom-4 left-4 flex gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-secondary-300 border border-secondary-500/20 uppercase tracking-wider">Next.js</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-secondary-300 border border-secondary-500/20 uppercase tracking-wider">Prisma</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-secondary-400 transition-colors">Taskify Kanban</h4>
+                            <p class="text-sm text-gray-400 mb-6 flex-grow">
+                                An interactive project management application with drag-and-drop mechanics, columns customizable to workflows, and team metrics.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-white-5 mt-auto">
+                                <a href="https://github.com/sinchanamb/taskify" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white flex items-center gap-1.5">
+                                    <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                                </a>
+                                <a href="https://taskify-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary-400 hover:text-secondary-300 flex items-center gap-1">
+                                    Live Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="glass rounded-2xl overflow-hidden border border-white-5 hover:border-primary-500/30 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full reveal-on-scroll animation-delay-400">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary-900 to-indigo-900 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-dark-950/20 group-hover:scale-105 transition-transform duration-500"></div>
+                            <i data-lucide="layers" class="w-16 h-16 text-indigo-400/40 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute bottom-4 left-4 flex gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-primary-300 border border-primary-500/20 uppercase tracking-wider">Web Component</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-dark-900/80 text-primary-300 border border-primary-500/20 uppercase tracking-wider">A11y</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-primary-400 transition-colors">AuraUI Library</h4>
+                            <p class="text-sm text-gray-400 mb-6 flex-grow">
+                                Lightweight, accessible web components designed for modern UI builds with robust dark/light themes and fluid animations out-of-the-box.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-white-5 mt-auto">
+                                <a href="https://github.com/sinchanamb/auraui" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white flex items-center gap-1.5">
+                                    <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                                </a>
+                                <a href="https://auraui-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="text-sm text-primary-400 hover:text-primary-300 flex items-center gap-1">
+                                    Live Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="credentials" class="py-24 px-6 relative border-t border-white-5">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <!-- Education Column -->
+                    <div class="reveal-on-scroll">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-400">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold font-display text-gray-100 font-display">Education</h3>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- Education Item -->
+                            <div class="glass p-6 rounded-2xl border border-white-5 hover:border-primary-500/20 transition-all duration-300">
+                                <span class="text-xs font-semibold text-primary-400 uppercase tracking-widest block mb-2">2013 - 2017</span>
+                                <h4 class="text-lg font-bold text-gray-200">Bachelor of Engineering in Computer Science</h4>
+                                <p class="text-sm text-gray-400 mt-1">Placeholder University / College</p> <!-- TODO: Replace with actual university -->
+                                <p class="text-xs text-gray-500 mt-3">Relevant Coursework: Data Structures, Database Systems, Web Engineering, Distributed Systems</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="reveal-on-scroll animation-delay-200">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-lg bg-secondary-500/10 flex items-center justify-center text-secondary-400">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-100 font-display">Certifications</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Certification Item 1 -->
+                            <div class="glass p-4 rounded-xl border border-white-5 hover:border-secondary-500/20 transition-all duration-300 flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-secondary-500/10 flex items-center justify-center text-secondary-400 flex-shrink-0">
+                                        <i data-lucide="cloud" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-200">AWS Certified Developer - Associate</h4>
+                                        <p class="text-xs text-gray-500">Amazon Web Services</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">2025</span>
+                            </div>
+
+                            <!-- Certification Item 2 -->
+                            <div class="glass p-4 rounded-xl border border-white-5 hover:border-secondary-500/20 transition-all duration-300 flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-secondary-500/10 flex items-center justify-center text-secondary-400 flex-shrink-0">
+                                        <i data-lucide="code-2" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-semibold text-gray-200">Full Stack Web Development Boot Camp</h4>
+                                        <p class="text-xs text-gray-500">FreeCodeCamp / Academy</p> <!-- TODO: Customize credential issuer -->
+                                    </div>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-400">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 relative border-t border-white-5 bg-dark-950">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="text-xs uppercase tracking-widest text-primary-400 font-bold mb-2">Get in touch</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold font-display text-white">Let's Connect</h3>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                    <!-- Contact Details / Info -->
+                    <div class="md:col-span-5 space-y-8 reveal-on-scroll">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-100 mb-3">Collaboration starts here</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                I'm open to full-time opportunities, consulting roles, or collaborative open-source projects. Reach out and let's build something awesome together!
+                            </p>
+                        </div>
+
+                        <!-- Contact List -->
+                        <div class="space-y-4">
+                            <!-- Direct Email -->
+                            <div class="flex items-center gap-4 group">
+                                <div class="w-10 h-10 rounded-xl bg-primary-500/10 flex items-center justify-center text-primary-400 group-hover:bg-primary-500/20 transition-all">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-500 block">Email Me</span>
+                                    <a href="mailto:sinchana.mb@example.com" class="text-sm font-semibold text-gray-200 hover:text-primary-400 transition-colors">sinchana.mb@example.com</a> <!-- TODO: Replace with actual email -->
+                                </div>
+                            </div>
+                            
+                            <!-- Location -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-secondary-500/10 flex items-center justify-center text-secondary-400">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-500 block">Location</span>
+                                    <span class="text-sm font-semibold text-gray-200">India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Icons -->
+                        <div class="pt-6">
+                            <span class="text-xs text-gray-500 uppercase tracking-wider block mb-4">Follow My Work</span>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/sinchanamb" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white-5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white-10 border border-white-5 transition-all" aria-label="GitHub">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/sinchanamb" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white-5 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:bg-white-10 border border-white-5 transition-all" aria-label="LinkedIn">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="md:col-span-7 reveal-on-scroll animation-delay-200">
+                        <div class="glass p-8 rounded-3xl border border-white-5 relative">
+                            <!-- Success message state hidden by default -->
+                            <div class="absolute inset-0 bg-dark-900/95 rounded-3xl z-10 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 opacity-0 pointer-events-none" id="form-success">
+                                <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 scale-75 transition-transform duration-500" id="success-checkmark">
+                                    <i data-lucide="check" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold text-gray-100 mb-2">Message Sent!</h4>
+                                <p class="text-sm text-gray-400 max-w-sm mb-6">
+                                    Thank you for reaching out, Sinchana M B has received your query and will reply shortly.
+                                </p>
+                                <button class="btn btn-outline btn-sm" id="reset-form-btn">Send Another Message</button>
+                            </div>
+
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="space-y-2">
+                                        <label for="name" class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Your Name</label>
+                                        <input type="text" id="name" name="name" required class="w-full bg-dark-900 border border-white-10 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/30 transition-all placeholder:text-gray-600" placeholder="John Doe">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="email" class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Your Email</label>
+                                        <input type="email" id="email" name="email" required class="w-full bg-dark-900 border border-white-10 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/30 transition-all placeholder:text-gray-600" placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="subject" class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Subject</label>
+                                    <input type="text" id="subject" name="subject" required class="w-full bg-dark-900 border border-white-10 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/30 transition-all placeholder:text-gray-600" placeholder="Let's build a new application!">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="message" class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Message</label>
+                                    <textarea id="message" name="message" required rows="4" class="w-full bg-dark-900 border border-white-10 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/30 transition-all placeholder:text-gray-600 resize-none" placeholder="Write your message here..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-full py-3.5 flex justify-center items-center gap-2">
+                                    <span>Send Message</span>
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white-5 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Sinchana M B. All rights reserved.</p>
+            <p class="flex items-center gap-1">
+                Built with <i data-lucide="heart" class="w-3.5 h-3.5 text-red-500 fill-red-500"></i> using HTML, CSS, and JS
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
